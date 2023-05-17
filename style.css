@@ -1,0 +1,257 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@100&family=Poppins:wght@400;500;600&display=swap');
+
+/* variables css */
+/* CSS pseudo-class and the highest level of the selector  */
+:root {
+  --header-height: 3.5rem;
+
+  /* colors */
+--first-color: hsl(250, 69%, 61%);
+--text-color:  rgb(211, 197, 197);
+--home-color: rgb(204, 183, 183);
+--logo-color: rgb(48, 46, 46);
+--body-color-light: #f0efef ;
+--body-color-dark: ( rgb(48, 46, 46));
+
+
+
+/* fonts */
+--body-font: 'Poppins', sans-serif;
+
+/* 0.5rem = 8px,  1rem = 16px,  1.5rem = 24px */
+--big-font-size: 2rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1.125rem;
+--normal-font-size: .938rem ;
+--small-font-size: .813rem;
+--smaller-font-size: .75rem;
+}
+
+
+/* Basic setup */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color-light);
+  color: var(--text-color);
+
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* Header style */
+.header{
+  max-width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 22px 12%;
+  z-index: 100;
+  border-bottom: 2px solid  rgb(224, 180, 180);
+  box-shadow: 3px 5px;
+  background-color: white;
+
+}
+
+/* Navigation setup */
+.navbar li {
+  list-style: none;
+  display: inline-block;
+  padding: 3px;
+}
+
+.navbar li a {
+  margin-left: 25px;
+  color: var(--text-color);
+  
+}
+/* To zoom in element on hover */
+.navbar li:hover{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+.navbar a:hover{
+  text-shadow: 2px 1px 3px pink;
+ 
+}
+
+/* Logo style */
+.logo{
+  text-decoration: none;
+  position: relative;
+  font-size: 25px;
+  font-weight: 600;
+  text-shadow: 1px 4px var(--text-color);
+  /* color: var(--text-color); */
+  color: var(--logo-color);
+  
+}
+.logo:hover{
+  text-shadow: 2px 3px pink;
+}
+
+/* Menu style on desktop */
+.header .menu-icon{
+  font-size: 50px;
+  display: none;
+}
+
+/* dark theme css */
+.dark {
+  /* background-color: var(--body-color-dark); */
+  background-color: rgb(15, 15, 15);
+  color: white;
+  transition: 0.6s;
+}
+
+/* ************************************************************* */
+
+/* Main section */
+.home{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  /* justify-content: space-evenly; */
+  height: 100vh;
+  padding: 60px;
+  color: var(--home-color);
+  
+}
+/* Text styling */
+.home-content {
+  /* max-width: 600px; */
+  display: flex;
+  align-items: flex-start;
+  flex: 50%;
+  flex-direction: column;
+}
+
+.home-content h3{
+  font-size: 32px;
+}
+
+.home-content h1{
+  font-size: 56px;
+  margin: -3px 0;
+  text-shadow: 2px 1px 3px pink;
+  
+
+}
+
+.home-content h2{
+  font-size: 32px;
+  text-shadow: 2px 1px 3px pink;
+  
+}
+
+.home-content p{
+  font-size: 20px;
+  text-shadow: 1px 1px 2px pink;
+  
+}
+
+/* Social media icons style */
+
+.home-sci a{
+  font-size: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(163, 127, 133);
+  color: rgb(204, 183, 183) ;
+  border-radius: 50%;
+  background: transparent;
+  margin: 30px 15px 30px 0;
+
+}
+
+.home-sci a:hover{
+  text-shadow: 1px 1px 2px pink;
+  
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 50%;
+  /* box-shadow: 12px 11px 12px 11px pink; */
+  width: 80%;
+  height: auto;
+  /* border-radius: 64% 21% 79% / 61% 46% 54% 39% ; */
+  border-radius: 50%;
+  background-color: rgb(224, 180, 180);
+      
+  }
+
+  .profileImg {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   border-radius: 40%;
+   /* max-width: 100%;
+   height: auto;
+    */
+  }
+
+  .scroll {
+    color: var(--text-color);
+    font-size: 20px;
+  }
+
+/* Responsive Menu */
+  @media (max-width: 786px) {
+    body {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    .navbar{
+      display: none;
+    }
+    .header .menu-icon{
+      display: block;
+    }
+    .home {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+ 
+
